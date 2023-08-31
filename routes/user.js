@@ -7,7 +7,7 @@ router.put("/:id", verifyAndAuthorization, userController.updateUser);
 
 // get user 
 router.get("/:id", verifyAndAuthorization, userController.getUser);
-
+jjj
 //get all friends it dosen't work
 router.get("/:id", verifyAndAuthorization, userController.getAllFriends);
 
