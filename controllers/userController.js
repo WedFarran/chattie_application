@@ -11,8 +11,8 @@ module.exports = {
     }
 
     try {
-      const UpdateUser = await User.findByIdAndUpdate(
-        req.params.id,
+      const updateUser = await User.findByIdAndUpdate(
+        req.user.id,
         {
           $set: req.body,
         },
@@ -70,7 +70,7 @@ module.exports = {
 
   getUser: async (req, res) => {
     try {
-      const user = await User.findById(req.params.id);
+      const user = await User.findById(req.user.id);
       const { password, __v, createdAt, updateAt, ...userData } = user._doc;
       res.status(200).json(userData);
     } catch (error) {

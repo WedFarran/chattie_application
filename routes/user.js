@@ -6,10 +6,10 @@ const {
 } = require("../middleware/verifyToken");
 
 // Update user
-router.put("/:id", userController.updateUser);
+router.put("/", userController.updateUser);
 
 // get user
-//router.get("/:id", verifyAndAuthorization, userController.getUser);
+router.get("/", userController.getUser);
 
 //get all friends
 //router.get("/:id", verifyAndAuthorization, userController.getAllFriends);
@@ -18,7 +18,7 @@ router.put("/:id", userController.updateUser);
 //router.get("/:id", verifyAndAuthorization, userController.addFriend);
 
 //delete friend
-router.put("/:id", userController.deleteFriend);
+router.put("/", userController.deleteFriend);
 
 //get profile
 //router.get("/:id", verifyAndAuthorization, userController.addFriend);
